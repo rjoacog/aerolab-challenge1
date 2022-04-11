@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    
+
+    .logo {
+        display: flex;
+       align-items: center;
+       margin-left: 10px;
+        width: 35px;
+    }
+
+    .coin {
+        margin-right: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 20%;
+
+        .coin2 {
+            display: flex;
+            align-items: center;
+            border: 2px ;
+            border-radius: 12px;
+            background-color: #D0D3D4;
+            margin-top: 3%;
+           
+        }
+        
+        h3{
+            display: flex;
+            margin-right: 10px;
+            font-size: small;
+            align-items: center;
+        }
+
+    }
+}

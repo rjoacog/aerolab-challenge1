@@ -2,10 +2,24 @@
     display: flex;
     border: outset;
     flex-direction: column;
-    justify-content: center;
     width: 20%;
-    height: 20%;
-    float: left;
-   
+    align-items: center;
+    max-width: 20%;
+    font-size: small;
+    border-radius: 25px;
+    margin-top: 10px;
+
+
+    .buy {
+        width: 50px;
+    }
+
+    .imgProd {
+        display: flex;
+        width: 50%;
+    }
 }
 
+.container:hover{
+    box-shadow: 0 4px 8px 0 black;
+}

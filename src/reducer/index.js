@@ -8,7 +8,8 @@ import {
 
 const initialState = {
     products: [],
-    users: []
+    users: [],
+    history: []
 }
 
 function rootReducer(state = initialState, { type, payload }) {
@@ -55,7 +56,7 @@ function rootReducer(state = initialState, { type, payload }) {
         case GET_HISTORY:
           return {
             ...state,
-            products: payload
+            history: payload
           }
       
 

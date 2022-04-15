@@ -11,15 +11,23 @@
 
 
     .buy {
-        width: 50px;
+        display: flex;
+        width: 40px;
+        align-items: center;
     }
 
     .imgProd {
         display: flex;
         width: 50%;
     }
+
+    button{
+        margin-bottom: 10px;
+    }
 }
 
 .container:hover{
     box-shadow: 0 4px 8px 0 black;
+    background-color: #85C1E9 ;
+    
 }

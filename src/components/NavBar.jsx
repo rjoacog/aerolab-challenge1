@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
     const dispatch = useDispatch();
     const users = useSelector((state) => state.users)
+   
 
     useEffect(() => {
         dispatch(getUser());
@@ -37,7 +38,7 @@ const NavBar = () => {
                 <div className={s.coin2}>
                     <h5> {users.points} </h5>
                     <img src={coin} width={"18px"} alt=""/>
-                    <button onClick={handleClick}>ADD COINS</button>
+                    <button onClick={handleClick} > +COINS</button>
                 </div>
             </div>
 

@@ -17,6 +17,7 @@ const Products = () => {
     const totalProducts = products.length
     const [currentPage, setCurrentPage] = useState(1);
     const [productsPerPage] = useState(16);
+    const[number, setNumber] = useState(16)
 
     const indexOfLastProduct = currentPage * productsPerPage
     const indexOfFirstProduct = indexOfLastProduct - productsPerPage
@@ -41,24 +42,31 @@ const Products = () => {
     function changePage(e) {
         e.preventDefault(e);
         setCurrentPage(2)
+        setNumber(32)
+      
     }
 
     function changePageBack(e) {
         e.preventDefault(e);
         setCurrentPage(1)
+        setNumber(16)
     }
 
 
     return (
         <div className={s.container}>
             <div className={s.filter}>
-                <h5>{productsPerPage} of {totalProducts} products </h5>
+                <h5>{number}  of {totalProducts} products </h5>
+                <h6>Sort by:</h6>
+            
                 <button onClick={handleProducts}>Most recent</button>
                 <button value="-P" onClick={handlePrice} >Lowest price</button>
                 <button value="+P" onClick={handlePrice} >Highest price</button>
-                <button onClick={changePageBack}> <img src={arrowLeft} /> </button>
-                <button onClick={changePage}> <img src={arrowRight} /> </button>
-                
+              
+                <div className={s.paginado}>
+                <button onClick={changePageBack} > <img src={arrowLeft}  /> </button>
+                <button onClick={changePage}> <img src={arrowRight}   /> </button>
+                </div>
             </div>
             <div className={s.productsContainer}>
             {
@@ -69,7 +77,8 @@ const Products = () => {
                         img={p.img.url}
                         category={p.category}
                         name={p.name}
-                        cost={p.cost < user.points ? p.cost : `you need ${p.cost - user.points}`}
+                        cost={p.cost < user.points ? p.cost : `You need ${p.cost - user.points}`}
+                        buttonDisabled={p.cost>user.points}
                     />
                 ) : <h1>"Product not found"</h1>
             }

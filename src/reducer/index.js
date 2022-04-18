@@ -3,11 +3,13 @@ import {
     GET_PRODUCTS, 
     GET_USER,
     ORDER_BY_PRICE,
+    GET_ALL_PRODUCTS
 } from "../actions/types";
 
 
 const initialState = {
     products: [],
+    allProducts: [],
     users: [],
     history: []
 }
@@ -18,6 +20,14 @@ function rootReducer(state = initialState, { type, payload }) {
             return {
                 ...state,
                 products: payload
+            }
+
+            case GET_ALL_PRODUCTS:
+              const prod = state.allProducts
+            return {
+                ...state,
+                allProducts: payload,
+                products: prod
             }
 
         case GET_USER:

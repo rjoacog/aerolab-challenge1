@@ -2,12 +2,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+ 
 
     .filter{
         display: flex;
         border: outset;
         justify-content: space-around;
-        width: auto;
+        width: 100%;
 
         button{
             display: flex;
@@ -45,14 +47,26 @@
         .paginado{
             display: flex;
             flex-direction: row;
-            color: black;
-            background-color: white;
-
+            height: auto;
+            width: auto;
             
             button{
-                border-radius: 50%;
+                border-radius: 25%;
+                background-color: transparent;
+
+                img{
+                    width: 50px;
+                    height: 50px;
+                   
+                }
+            }
+
+            button:active{
+                color:black
             }
         }
+
+        
 
        
     }
@@ -63,7 +77,10 @@
         margin-right: 10px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
+        max-width: 1200px;
+        align-items: center;
+        margin-bottom: 20px;
     }
    
 }

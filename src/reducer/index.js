@@ -23,11 +23,10 @@ function rootReducer(state = initialState, { type, payload }) {
             }
 
             case GET_ALL_PRODUCTS:
-              const prod = state.allProducts
             return {
                 ...state,
                 allProducts: payload,
-                products: prod
+                products: payload
             }
 
         case GET_USER:

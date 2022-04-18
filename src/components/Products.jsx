@@ -29,8 +29,8 @@ const Products = () => {
     }, [])
 
 
-    function handleProducts(e) {
-        e.preventDefault(e)
+    function handleProducts() {
+        // e.preventDefault(e)
         dispatch(getAllProducts())
     }
 

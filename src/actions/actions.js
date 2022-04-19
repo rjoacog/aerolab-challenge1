@@ -58,19 +58,6 @@ export function sortByPrice(payload) {
     }
 }
 
-export function postHistory(_id) {
-    try {
-        return async function (dispatch) {
-            await axios.post("https://coding-challenge-api.aerolab.co/redeem", { productId: _id }, {
-                headers: {
-                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjRmMjY4ZmMxNzAyZDAwMjE4ZGQwNzQiLCJpYXQiOjE2NDkzNTQzODN9.vohtMMHnp9AX7WLiJIYy1feWFpYV3XUYa7ssy8R5ZyQ"
-                }
-            })
-        }
-    } catch (error) {
-        console.log(error)
-    }
-}
 
 export function getHistory() {
     return async function (dispatch) {
@@ -86,16 +73,4 @@ export function getHistory() {
     }
 }
 
-export function postCoins(){
-    try {
-        return async function (dispatch) {
-            await axios.post("https://coding-challenge-api.aerolab.co/user/points", { amount: 1000 }, {
-                headers: {
-                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjRmMjY4ZmMxNzAyZDAwMjE4ZGQwNzQiLCJpYXQiOjE2NDkzNTQzODN9.vohtMMHnp9AX7WLiJIYy1feWFpYV3XUYa7ssy8R5ZyQ"
-                }
-            })
-        }
-    } catch (error) {
-        console.log(error)
-    }
-}
+

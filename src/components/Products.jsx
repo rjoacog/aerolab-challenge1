@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getProducts, sortByPrice, postHistory, addHist, getAllProducts } from "../actions/actions";
+import { getProducts, sortByPrice, getAllProducts } from "../actions/actions";
 import Card from "./Card";
 import s from "./Products.module.scss"
 import arrowRight from "../assets/icons/arrow-right.svg"
@@ -12,7 +12,7 @@ const Products = () => {
     const user = useSelector((state) => state.users)
     const products = useSelector((state) => state.products)
     const [cost, setCost] = useState("");
-    console.log(products)
+    
 
     const totalProducts = products.length
     const [currentPage, setCurrentPage] = useState(1);
@@ -63,8 +63,8 @@ const Products = () => {
                 <button value="-P" onClick={handlePrice} >Lowest price</button>
                 <button value="+P" onClick={handlePrice} >Highest price</button>
                 <div className={s.paginado}>
-                <button onClick={changePageBack} > <img src={arrowLeft} /> </button>
-                <button onClick={changePage}> <img src={arrowRight} /> </button>
+                <button onClick={changePageBack} > <img src={arrowLeft} alt=""/> </button>
+                <button onClick={changePage}> <img src={arrowRight} alt=""/> </button>
             </div>
             </div>
            

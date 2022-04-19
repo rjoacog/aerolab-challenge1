@@ -3,6 +3,10 @@
     flex-direction: column;
     align-items: center;
 
+        .card{
+            display: flex;
+            flex-direction: column-reverse;
+        }
 
     button{
         // background-color: #4CAF50; /* Green */

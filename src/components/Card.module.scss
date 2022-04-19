@@ -1,6 +1,5 @@
 .container {
     display: flex;
-    border: outset;
     flex-direction: column;
     align-items: center;
     width: 256px;
@@ -8,16 +7,18 @@
     font-size: small;
     border-radius: 25px;
     margin-top: 10px;
-
+    box-shadow: 0px 0px 26px 1px rgb(0 0 0 / 15%);
     
-    .icon{
+
+
+    .icon {
         display: flex;
-        align-items: center;   
+        align-items: center;
         position: relative;
         height: 300px;
         z-index: 1;
 
-        img{
+        img {
             width: auto;
             height: auto;
             display: flex;
@@ -25,7 +26,7 @@
         }
     }
 
-    .info{
+    .info {
 
         display: flex;
         justify-content: center;
@@ -38,52 +39,55 @@
 
 
         h5 {
-            
+
             font-size: medium;
             margin-bottom: 35px;
-           
-    
-            img{
+
+
+            img {
                 width: 15px;
-        
+
             }
 
-           
+
         }
-        button{
+
+        button {
             border: none;
-           background-color: #000080;
-           color: white;
-           border-radius: 20px;
-           height: 20px;
-           cursor: pointer;
+            background-color: #000080;
+            color: white;
+            border-radius: 20px;
+            height: 20px;
+            cursor: pointer;
             margin-top: -20px;
             margin-bottom: 10px;
         }
-        button:hover{
-            box-shadow:  #20202049;
+
+        button:hover {
+            box-shadow: #20202049;
         }
-        button:disabled{
+
+        button:disabled {
             background-color: gray;
-            cursor:not-allowed;
+            cursor: not-allowed;
         }
     }
 
 
-  
+
 }
 
 
 
-.container:hover{
-    box-shadow: black;
-    background-color: #85C1E9 ;
+.container:hover {
+    box-shadow: 0px 0px 26px 1px rgb(0 0 0 / 15%);
+    background-color: #85C1E9;
     height: auto;
-    
+
 }
 
-.container:hover .info{
+.container:hover .info {
     margin-top: -50px;
-   
+
     transition: 500ms;
 }

@@ -7,7 +7,7 @@
 
     .filter{
         display: flex;
-        border: outset;
+        border-bottom: 0.15px solid rgba(0,0,0,0.15);
         justify-content: space-around;
         width: 99%;
 
@@ -81,6 +81,7 @@
         max-width: 1200px;
         align-items: center;
         margin-bottom: 20px;
+        row-gap: 20px;
     }
    
 }

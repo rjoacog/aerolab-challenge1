@@ -56,7 +56,6 @@ function rootReducer(state = initialState, { type, payload }) {
                 }
                 return 0;
               });
-              console.log(priceArr)
         return {
           ...state,
           products: priceArr,
